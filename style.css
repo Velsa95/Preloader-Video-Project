@@ -1,0 +1,115 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.preloader{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    transition: .3s ease all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader_item{
+    border: 16px solid #d4d4d4; /* Light grey */
+    border-top: 16px solid rgb(50, 113, 207);
+  border-bottom: 16px solid rgb(50, 113, 207);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.hide_preloader{
+    z-index: -999;
+    visibility: hidden;
+}
+
+header{
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+header::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+}
+
+.video_container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+h1{
+    position: absolute;
+    top: 45%;
+    left:45%;
+    color: white;
+    z-index: 1;
+}
+
+.switch_btn{
+    z-index: 1;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 7%;
+    left: 7%;
+    width: 7rem;
+    height: 2.5rem;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    transition: .3s ease all;
+}
+
+.switch{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 20px;
+    left: 0;
+    transition: .3s ease all;
+}
+
+.slide .switch{
+    left: 50%;
+}
